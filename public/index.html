@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly word</title>
+    <script>
+        const words = [{
+            address: '고린도후서 5:17',
+            message: '그런즉 누구든지 그리스도 안에 있으면 새로운 피조물이라 이전 것은 지나갔으니, 보라 새 것이 되었도다.'
+        }]
+    </script>
+</head>
+<body>
+    <div id="root">
+        <p class="message">
+
+        </p>
+        <p class="address">
+
+        </p>
+    </div>
+<script>
+    document.querySelector('.message').innerHTML = words[0].message
+    document.querySelector('.address').innerHTML = '- ' + words[0].address
+</script>
+</body>
+</html>

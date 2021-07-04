@@ -1,0 +1,14 @@
+{
+  "name": "weekly-word",
+  "version": "0.0.1",
+  "description": "Weekly word for recitation",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
