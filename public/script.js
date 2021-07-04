@@ -21,8 +21,7 @@ var word = words[weeksFromInitDay % words.length]
 document.querySelector('.message span').innerHTML = word.message
 document.querySelector('.address span').innerHTML = '- ' + word.address
 
-document.querySelector('.this-week').innerHTML =
-  '이번 주(' + start + ' ~ ' + end + ')'
+document.querySelector('.this-week').innerHTML = start + ' ~ ' + end
 
 document.querySelector('footer > details > ul').innerHTML = words
   .map(word => {
