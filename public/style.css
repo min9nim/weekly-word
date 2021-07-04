@@ -8,7 +8,6 @@ body {
   color: #ededed;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -43,9 +42,10 @@ section .address {
 }
 
 footer {
+  font-size: 14px;
   text-align: right;
   cursor: pointer;
-  padding: 0 20px 0 0;
+  padding: 20px;
 }
 
 footer > details > ul {
@@ -67,6 +67,9 @@ footer > details > ul > li > .message {
 }
 
 @media screen and (max-width: 769px) {
+  body {
+    padding: 0;
+  }
   section .message {
     font-size: 30px;
     line-height: 40px;
