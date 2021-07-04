@@ -8,6 +8,8 @@
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script>
       console.log(dayjs().format('YYYY-MM-DD'))
+      const start = dayjs().startOf('week').format('YYYY.M.D')
+      const end = dayjs().endOf('week').format('M.D')
     </script>
     <script>
       const words = [
@@ -77,7 +79,9 @@
   <body>
     <header>
       <div>매주 말씀 암송</div>
-      <div>- 이번 주(2021.7.4 ~ 7.11)</div>
+      <div>
+        <i class="this-week"></i>
+      </div>
     </header>
     <section>
       <div class="message">
@@ -91,6 +95,8 @@
       document.querySelector('.message span').innerHTML = words[0].message
       document.querySelector('.address span').innerHTML =
         '- ' + words[0].address
+      document.querySelector('.this-week').innerHTML =
+        '이번 주(' + start + ' ~ ' + end + ')'
     </script>
   </body>
 </html>
