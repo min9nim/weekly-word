@@ -47,6 +47,19 @@ footer {
   cursor: pointer;
 }
 
+footer > details > ul {
+  list-style: none;
+}
+
+footer > details > ul > li > .message {
+  text-align: left;
+  line-height: 25px;
+  margin-bottom: 5px;
+}
+footer > details > ul > li {
+  padding: 20px 0;
+}
+
 @media screen and (max-width: 769px) {
   section .message {
     font-size: 30px;

@@ -24,6 +24,15 @@ document.querySelector('.this-week').innerHTML =
 
 document.querySelector('footer > details > ul').innerHTML = words
   .map(word => {
-    return '<li>' + word.address + '</li>'
+    return `
+    <li>
+        <div class="message">
+            ${word.message}
+        </div>
+        <div class="address">
+            - ${word.address}
+        </div>
+    </li>
+    `
   })
   .join('')
