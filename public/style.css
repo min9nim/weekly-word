@@ -34,6 +34,7 @@ section .message {
   flex-direction: column;
   justify-content: flex-end;
   margin-bottom: 10px;
+  line-height: 55px;
 }
 section .address {
   font-size: 20px;
@@ -44,5 +45,6 @@ section .address {
 @media screen and (max-width: 769px) {
   section .message {
     font-size: 30px;
+    line-height: 40px;
   }
 }
