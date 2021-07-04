@@ -1,3 +1,8 @@
+:root {
+  --primary: #ededed;
+  --secondary: #cccccc;
+}
+
 html,
 body {
   height: 100%;
@@ -5,7 +10,7 @@ body {
 }
 body {
   background-color: #333333;
-  color: #ededed;
+  color: var(--primary);
   display: flex;
   flex-direction: column;
   max-width: 700px;
@@ -17,7 +22,16 @@ header {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  color: var(--secondary);
 }
+
+header > div:nth-child(1) {
+  color: var(--primary);
+}
+header > div:nth-child(2) {
+  color: var(--secondary);
+}
+
 section {
   flex: 1;
   display: flex;
@@ -46,6 +60,7 @@ footer {
   text-align: right;
   cursor: pointer;
   padding: 20px;
+  color: var(--secondary);
 }
 
 footer > details > ul {
