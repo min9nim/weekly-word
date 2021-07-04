@@ -16,6 +16,8 @@ body {
 header {
   text-align: left;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 section {
   flex: 1;
