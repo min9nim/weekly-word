@@ -1,36 +1,46 @@
-html, body{
-    height: 100%;
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
-body{
-    background-color: #333333;
-    color: #ededed;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-header{
-    text-align: left;
-    padding: 20px;
-}
-section {
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+body {
+  background-color: #333333;
+  color: #ededed;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-section .message{
-    font-size: 40px;
-    flex:1;
-    vertical-align: bottom;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+header {
+  text-align: left;
+  padding: 20px;
 }
-section .address{
-    font-size: 20px;
-    text-align: right;
-    flex:1;
+section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+section .message {
+  font-size: 40px;
+  flex: 1;
+  vertical-align: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+section .address {
+  font-size: 20px;
+  text-align: right;
+  flex: 1;
+}
+
+@media screen and (max-width: 769px) {
+  section .message {
+    font-size: 30px;
+  }
 }
