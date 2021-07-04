@@ -26,11 +26,11 @@ document.querySelector('footer > details > ul').innerHTML = words
   .map(word => {
     return `
     <li>
+        <div class="address">
+            ${word.address}
+        </div>
         <div class="message">
             ${word.message}
-        </div>
-        <div class="address">
-            - ${word.address}
         </div>
     </li>
     `

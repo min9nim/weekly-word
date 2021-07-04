@@ -45,19 +45,25 @@ section .address {
 footer {
   text-align: right;
   cursor: pointer;
+  padding: 0 20px 0 0;
 }
 
 footer > details > ul {
   list-style: none;
 }
 
-footer > details > ul > li > .message {
-  text-align: left;
-  line-height: 25px;
-  margin-bottom: 5px;
-}
 footer > details > ul > li {
+  text-align: left;
   padding: 20px 0;
+}
+
+footer > details > ul > li > .address {
+  font-style: italic;
+}
+
+footer > details > ul > li > .message {
+  line-height: 25px;
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 769px) {
