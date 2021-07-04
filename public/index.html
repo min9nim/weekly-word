@@ -2,7 +2,11 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weekly word</title>
+    <link type="text/css" rel="stylesheet" href="style.css" >
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>console.log(dayjs().format("YYYY-MM-DD"))</script>
     <script>
         const words = [{
             address: '고린도후서 5:17',
@@ -11,17 +15,19 @@
     </script>
 </head>
 <body>
-    <div id="root">
-        <p class="message">
+    <header>매주 말씀 암송</header>
+    <section>
+        <div class="message">
+            <span></span>
+        </div>
+        <div class="address">
+            <span></span>
 
-        </p>
-        <p class="address">
-
-        </p>
-    </div>
+        </div>
+    </section>
 <script>
-    document.querySelector('.message').innerHTML = words[0].message
-    document.querySelector('.address').innerHTML = '- ' + words[0].address
+    document.querySelector('.message span').innerHTML = words[0].message
+    document.querySelector('.address span').innerHTML = '- ' + words[0].address
 </script>
 </body>
 </html>
