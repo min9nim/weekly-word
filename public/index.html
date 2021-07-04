@@ -102,7 +102,7 @@
       var start = today.startOf('week').format('YYYY.M.D')
       var end = today.endOf('week').format('M.D')
 
-      var word = words[weeksFromInitDay % 60]
+      var word = words[weeksFromInitDay % words.length]
       document.querySelector('.message span').innerHTML = word.message
       document.querySelector('.address span').innerHTML = '- ' + word.address
 
