@@ -3,12 +3,22 @@
   "version": "0.0.1",
   "description": "Weekly word for recitation",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "reformat": "prettier --write",
+    "prepare": "husky install"
   },
   "main": "index.js",
   "license": "MIT",
   "private": false,
+  "lint-staged": {
+    "public/**/*.{js,jsx,ts,tsx,json,css,scss,md,html}": [
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
+    "live-server": "^1.2.1",
+    "prettier": "^2.3.2"
   }
 }
