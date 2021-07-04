@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 body {
   background-color: #333333;
@@ -40,6 +40,11 @@ section .address {
   font-size: 20px;
   text-align: right;
   flex: 1;
+}
+
+footer {
+  text-align: right;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 769px) {

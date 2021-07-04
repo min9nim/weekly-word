@@ -21,3 +21,9 @@ document.querySelector('.address span').innerHTML = '- ' + word.address
 
 document.querySelector('.this-week').innerHTML =
   '이번 주(' + start + ' ~ ' + end + ')'
+
+document.querySelector('footer > details > ul').innerHTML = words
+  .map(word => {
+    return '<li>' + word.address + '</li>'
+  })
+  .join('')
