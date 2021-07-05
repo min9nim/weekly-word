@@ -3,8 +3,57 @@
   --secondary: #cccccc;
 }
 
+@font-face {
+  font-family: 'BMEULJIRO';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BMDOHYEON';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BMJUA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IM_Hyemin-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ELAND_Nice_M';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EliceDigitalBaeum_Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
+  font-family: EliceDigitalBaeum_Bold;
   height: 100%;
   /*overflow: hidden;*/
 }
@@ -40,6 +89,7 @@ section {
 }
 
 section .message {
+  font-family: ELAND_Nice_M;
   font-size: 40px;
   flex: 1;
   vertical-align: bottom;
@@ -79,6 +129,10 @@ footer > details > ul > li > .address {
 footer > details > ul > li > .message {
   line-height: 25px;
   margin-top: 5px;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 769px) {

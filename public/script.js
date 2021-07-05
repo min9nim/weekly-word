@@ -37,3 +37,10 @@ document.querySelector('footer > details > ul').innerHTML = words
     `
   })
   .join('')
+
+document
+  .querySelector('footer > details > summary')
+  .addEventListener('click', () => {
+    document.querySelector('section').classList.toggle('hidden')
+    document.querySelector('header').classList.toggle('hidden')
+  })
