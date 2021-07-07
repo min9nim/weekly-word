@@ -4,6 +4,8 @@ import dayjs from 'https://unpkg.com/dayjs@1.8.21/esm'
 
 console.log('script.js going..')
 
+window.swiper = new Swiper('.mySwiper', {})
+
 // duration 플러그인 설치
 dayjs.extend(window.dayjs_plugin_duration)
 

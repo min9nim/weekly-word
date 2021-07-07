@@ -71,12 +71,7 @@
         <ul />
       </details>
     </footer>
-
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper('.mySwiper', {})
-    </script>
-
     <script>
       console.log('before script.js')
     </script>
@@ -93,6 +88,7 @@
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/service-worker.js')
       }
+      console.log('pwa script.js')
     </script>
   </body>
 </html>
