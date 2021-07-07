@@ -6,22 +6,25 @@ console.log('script.js going..')
 // duration 플러그인 설치
 dayjs.extend(window.dayjs_plugin_duration)
 
-const getIndex = () => {
+const weeksCount = (initDay, targetDay) =>
+  dayjs.duration(targetDay.diff(initDay)).weeks()
+
+var today = dayjs()
+
+var start = today.startOf('week').format('YYYY.M.D')
+var end = today.endOf('week').format('M.D')
+
+const getIndex = targetDay => {
   // 기준일
   var initDay = dayjs('2021-07-04', 'YYYY-MM-DD')
 
-  // var today = dayjs('2021-07-18', 'YYYY-MM-DD')
-  var today = dayjs()
-  var weeksFromInitDay = dayjs.duration(today.diff(initDay)).weeks()
+  var weeksFromInitDay = weeksCount(initDay, today)
   console.log('기준일(2021/7/4)로 부터 이번 주:', weeksFromInitDay)
-
-  var start = today.startOf('week').format('YYYY.M.D')
-  var end = today.endOf('week').format('M.D')
 
   return weeksFromInitDay % words.length
 }
 
-const currentIndex = getIndex()
+const currentIndex = getIndex(today)
 
 const wordToHtml = word => `
     <div class="swiper-slide"><section>
@@ -46,10 +49,15 @@ const initSwiper = (words, currentIndex) => {
 
 initSwiper(words, currentIndex)
 
-document.querySelector('.this-week').innerHTML = start + ' ~ ' + end
-document.querySelector('footer > details > ul').innerHTML = words
-  .map(word => {
-    return `
+const initDate = (start, end) => {
+  document.querySelector('.this-week').innerHTML = start + ' ~ ' + end
+}
+initDate(start, end)
+
+const initAllWords = words => {
+  document.querySelector('footer > details > ul').innerHTML = words
+    .map(word => {
+      return `
     <li>
         <div class="address">
             ${word.address}
@@ -59,8 +67,11 @@ document.querySelector('footer > details > ul').innerHTML = words
         </div>
     </li>
     `
-  })
-  .join('')
+    })
+    .join('')
+}
+
+initAllWords(words)
 
 document
   .querySelector('footer > details > summary')
