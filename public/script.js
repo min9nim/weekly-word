@@ -29,15 +29,18 @@ const wordToHtml = word => `
       </div>
     </section></div>`
 
-// currentIndex 가 항상 중앙에 위치하게끔 좌우로 더 여유있게 붙여줌
-var after = [...words.slice(currentIndex), ...words.slice(0, currentIndex)]
-swiper.appendSlide(after.map(wordToHtml))
+const initSwiper = (words, currentIndex) => {
+  // currentIndex 가 항상 중앙에 위치하게끔 좌우로 더 여유있게 붙여줌
+  const after = [...words.slice(currentIndex), ...words.slice(0, currentIndex)]
+  const before = [
+    ...words.slice(0, currentIndex).reverse(),
+    ...words.slice(currentIndex).reverse(),
+  ]
+  swiper.appendSlide(after.map(wordToHtml))
+  swiper.prependSlide(before.map(wordToHtml))
+}
 
-var before = [
-  ...words.slice(0, currentIndex).reverse(),
-  ...words.slice(currentIndex).reverse(),
-]
-swiper.prependSlide(before.map(wordToHtml))
+initSwiper(words, currentIndex)
 
 document.querySelector('.this-week').innerHTML = start + ' ~ ' + end
 document.querySelector('footer > details > ul').innerHTML = words
