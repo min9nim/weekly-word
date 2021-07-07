@@ -89,6 +89,7 @@ section {
 }
 
 section .message {
+  text-align: left;
   font-family: ELAND_Nice_M;
   font-size: 40px;
   flex: 1;
