@@ -1,20 +1,19 @@
-import { initAllWords, initDate, initSwiper, getIndex } from './utils.js'
+import { initAllWords, initDate, initSwiper } from './utils.js'
 import dayjs from 'https://unpkg.com/dayjs@1.8.21/esm'
 
-console.log('script.js going..')
+console.log('main.js start')
 
 // duration 플러그인 설치
 dayjs.extend(window.dayjs_plugin_duration)
 
-window.swiper = new Swiper('.mySwiper', {})
-
 const today = dayjs()
-
-// 말씀 슬라이드 세팅
-initSwiper(today)
+window.swiper = new Swiper('.mySwiper', {})
 
 // 날짜세팅
 initDate(today)
+
+// 말씀 슬라이드 세팅
+initSwiper(today)
 
 // 전체암송구절 세팅
 initAllWords()
