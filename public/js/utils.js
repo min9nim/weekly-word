@@ -26,20 +26,20 @@ export const initAllWords = () => {
 }
 
 export const initSwiper = today => {
-  const currentIndex = getIndex(today)
-  // currentIndex 가 항상 중앙에 위치하게끔 좌우로 더 여유있게 붙여줌
-  const after = [...words.slice(currentIndex), ...words.slice(0, currentIndex)]
+  const index = wordIndex(today)
+  // index 가 항상 중앙에 위치하게끔 좌우로 더 여유있게 붙여줌
+  const after = [...words.slice(index), ...words.slice(0, index)]
   const before = [
-    ...words.slice(0, currentIndex).reverse(),
-    ...words.slice(currentIndex).reverse(),
+    ...words.slice(0, index).reverse(),
+    ...words.slice(index).reverse(),
   ]
   swiper.appendSlide(after.map(wordToHtml))
   swiper.prependSlide(before.map(wordToHtml))
 
-  const initIndex = window.swiper.activeIndex
+  const initSlideIndex = window.swiper.activeIndex
 
   swiper.on('slideChange', function () {
-    const diff = swiper.activeIndex - initIndex
+    const diff = swiper.activeIndex - initSlideIndex
     initDate(today.add(7 * diff, 'day'))
   })
 }
@@ -54,7 +54,7 @@ export const wordToHtml = word => `
       </div>
     </section></div>`
 
-export const getIndex = targetDay => {
+export const wordIndex = targetDay => {
   // 기준일
   var initDay = dayjs('2021-07-04', 'YYYY-MM-DD')
 
