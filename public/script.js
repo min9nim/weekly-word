@@ -19,11 +19,7 @@ var end = today.endOf('week').format('M.D')
 
 var currentIndex = weeksFromInitDay % words.length
 
-// currentIndex 가 항상 중앙에 위치하게끔 좌우로 더 여유있게 붙여줌
-var after = [...words.slice(currentIndex), ...words.slice(0, currentIndex)]
-swiper.appendSlide(
-  after.map(
-    word => `
+const wordToHtml = word => `
     <div class="swiper-slide"><section>
       <div class="message">
         <span>${word.message}</span>
@@ -31,28 +27,17 @@ swiper.appendSlide(
       <div class="address">
         <span>${word.address}</span>
       </div>
-    </section></div>`,
-  ),
-)
+    </section></div>`
+
+// currentIndex 가 항상 중앙에 위치하게끔 좌우로 더 여유있게 붙여줌
+var after = [...words.slice(currentIndex), ...words.slice(0, currentIndex)]
+swiper.appendSlide(after.map(wordToHtml))
 
 var before = [
   ...words.slice(0, currentIndex).reverse(),
   ...words.slice(currentIndex).reverse(),
 ]
-swiper.prependSlide(
-  before.map(
-    word => `
-    <div class="swiper-slide"><section>
-      <div class="message">
-        <span>${word.message}</span>
-      </div>
-      <div class="address">
-        <span>${word.address}</span>
-      </div>
-    </section></div>
-`,
-  ),
-)
+swiper.prependSlide(before.map(wordToHtml))
 
 document.querySelector('.this-week').innerHTML = start + ' ~ ' + end
 document.querySelector('footer > details > ul').innerHTML = words
