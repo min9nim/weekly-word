@@ -11,9 +11,6 @@ const weeksCount = (initDay, targetDay) =>
 
 var today = dayjs()
 
-var start = today.startOf('week').format('YYYY.M.D')
-var end = today.endOf('week').format('M.D')
-
 const getIndex = targetDay => {
   // 기준일
   var initDay = dayjs('2021-07-04', 'YYYY-MM-DD')
@@ -49,10 +46,13 @@ const initSwiper = (words, currentIndex) => {
 
 initSwiper(words, currentIndex)
 
-const initDate = (start, end) => {
-  document.querySelector('.this-week').innerHTML = start + ' ~ ' + end
+const initDate = target => {
+  document.querySelector('.this-week').innerHTML =
+    target.startOf('week').format('YYYY.M.D') +
+    ' ~ ' +
+    target.endOf('week').format('M.D')
 }
-initDate(start, end)
+initDate(today)
 
 const initAllWords = words => {
   document.querySelector('footer > details > ul').innerHTML = words
