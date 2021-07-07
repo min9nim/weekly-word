@@ -47,7 +47,43 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <link type="text/css" rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/dayjs/plugin/duration.js"></script>
+    <style>
+      .swiper-container {
+        width: 100%;
+        height: calc(100% - 34px);
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -56,20 +92,22 @@
         <i class="this-week"></i>
       </div>
     </header>
-    <section>
-      <div class="message">
-        <span></span>
-      </div>
-      <div class="address">
-        <span></span>
-      </div>
-    </section>
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper"></div>
+    </div>
+
     <footer>
       <details>
         <summary>전체 암송구절</summary>
         <ul />
       </details>
     </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {})
+    </script>
+
     <script>
       console.log('before script.js')
     </script>
