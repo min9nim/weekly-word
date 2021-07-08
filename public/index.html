@@ -52,6 +52,7 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/dayjs/plugin/duration.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link type="text/css" rel="stylesheet" href="./css/swiper.css" />
   </head>
   <body>
@@ -64,14 +65,12 @@
     <div class="swiper-container mySwiper">
       <div class="swiper-wrapper"></div>
     </div>
-
     <div class="allWords">
       <div class="label">
         <span>📜 전체 암송구절</span>
       </div>
       <ul />
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       console.log('before main.js')
     </script>
@@ -79,16 +78,15 @@
     <script>
       console.log('after main.js')
     </script>
-
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
-    ></script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
-      }
-      console.log('pwa script.js')
-    </script>
+    <!--    <script-->
+    <!--      type="module"-->
+    <!--      src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"-->
+    <!--    ></script>-->
+    <!--    <script>-->
+    <!--      if ('serviceWorker' in navigator) {-->
+    <!--        navigator.serviceWorker.register('/service-worker.js')-->
+    <!--      }-->
+    <!--      console.log('pwa script.js')-->
+    <!--    </script>-->
   </body>
 </html>
