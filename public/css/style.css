@@ -114,13 +114,18 @@ section .address {
 .allWords {
   font-size: 14px;
   text-align: right;
-  padding: 20px;
+  /* padding: 20px; */
   color: var(--secondary);
   z-index: 1000;
   position: absolute;
   top: calc(100% - 55px);
   transition: top 0.2s ease-in-out;
   background-color: var(--bgcolor);
+  width: 100%;
+}
+
+.allWords > .label {
+  padding: 20px 20px 0 0;
 }
 
 .allWords > .label > span {
@@ -134,7 +139,7 @@ section .address {
 
 .allWords > ul > li {
   text-align: left;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 .allWords > ul > li > .address {
