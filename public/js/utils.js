@@ -2,7 +2,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.8.21/esm'
 import words from './words.js'
 
 export const initAllWords = () => {
-  document.querySelector('footer > details > ul').innerHTML = words
+  document.querySelector('.allWords > ul').innerHTML = words
     .map(word => {
       return `
     <li>
@@ -18,10 +18,20 @@ export const initAllWords = () => {
     .join('')
 
   document
-    .querySelector('footer > details > summary')
+    .querySelector('.allWords > .label > span')
     .addEventListener('click', () => {
-      document.querySelector('section').classList.toggle('hidden')
-      document.querySelector('header').classList.toggle('hidden')
+      // window.scrollTo(0, document.documentElement.offsetHeight - 40)
+      // const allWordsDom = document.querySelector('.allWords')
+      //
+      // if(allWordsDom.style.top === '0px'){
+      //   document.querySelector('.allWords').style.top = 'calc(100% - 55px)'
+      // }else{
+      //   document.querySelector('.allWords').style.top = '0px'
+      // }
+      window.scrollTo(0, document.documentElement.offsetHeight - 40)
+
+      // document.querySelector('.mySwiper').classList.toggle('hidden')
+      // document.querySelector('header').classList.toggle('hidden')
     })
 }
 

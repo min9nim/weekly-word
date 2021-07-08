@@ -1,6 +1,7 @@
 :root {
   --primary: #ededed;
   --secondary: #aaaaaa;
+  --bgcolor: #333333;
 }
 
 @font-face {
@@ -51,6 +52,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   font-family: EliceDigitalBaeum_Bold;
@@ -58,7 +63,7 @@ body {
   /*overflow: hidden;*/
 }
 body {
-  background-color: #333333;
+  background-color: var(--bgcolor);
   color: var(--primary);
   display: flex;
   flex-direction: column;
@@ -106,29 +111,37 @@ section .address {
   flex: 1;
 }
 
-footer {
+.allWords {
   font-size: 14px;
   text-align: right;
-  cursor: pointer;
   padding: 20px;
   color: var(--secondary);
+  z-index: 1000;
+  position: absolute;
+  top: calc(100% - 55px);
+  transition: top 0.2s ease-in-out;
+  background-color: var(--bgcolor);
 }
 
-footer > details > ul {
+.allWords > .label > span {
+  cursor: pointer;
+}
+
+.allWords > ul {
   list-style: none;
   padding: 0;
 }
 
-footer > details > ul > li {
+.allWords > ul > li {
   text-align: left;
   padding: 20px 0;
 }
 
-footer > details > ul > li > .address {
+.allWords > ul > li > .address {
   font-style: italic;
 }
 
-footer > details > ul > li > .message {
+.allWords > ul > li > .message {
   line-height: 25px;
   margin-top: 5px;
 }
