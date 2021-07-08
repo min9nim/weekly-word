@@ -87,30 +87,27 @@ header > div:nth-child(2) {
 }
 
 section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  /*flex: 1;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*height: 100%;*/
+  padding: 20px;
 }
 
 section .message {
   text-align: left;
   font-family: ELAND_Nice_M;
   font-size: 40px;
-  flex: 1;
   vertical-align: bottom;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin-bottom: 10px;
   line-height: 55px;
-  padding: 20px;
 }
 section .address {
   font-size: 20px;
   text-align: right;
-  flex: 1;
-  padding: 20px;
 }
 
 .allWords {

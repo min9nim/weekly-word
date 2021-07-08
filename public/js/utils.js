@@ -55,14 +55,16 @@ export const initSwiper = today => {
 }
 
 export const wordToHtml = word => `
-    <div class="swiper-slide"><section>
-      <div class="message">
-        <span>${word.message}</span>
-      </div>
-      <div class="address">
-        <span>${word.address}</span>
-      </div>
-    </section></div>`
+    <div class="swiper-slide">
+        <section>
+          <div class="message">
+            <span>${word.message}</span>
+          </div>
+          <div class="address">
+            <span>${word.address}</span>
+          </div>
+        </section>
+    </div>`
 
 export const wordIndex = targetDay => {
   // 기준일
