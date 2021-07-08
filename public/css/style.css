@@ -122,6 +122,8 @@ section .address {
   transition: top 0.2s ease-in-out;
   background-color: var(--bgcolor);
   width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .allWords > .label {
