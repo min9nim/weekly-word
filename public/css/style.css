@@ -101,12 +101,12 @@ section .message {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  /* margin-bottom: 10px; */
-  font-size: min(5vh, 5vw);
-  line-height: min(7vh, 7vw);
+  margin-bottom: 10px;
+  font-size: 4vh;
+  line-height: 5vh;
 }
 section .address {
-  font-size: min(4vh, 4vw);
+  font-size: 3vh;
   text-align: right;
 }
 
@@ -119,7 +119,7 @@ section .address {
   position: absolute;
   top: calc(100% - 55px);
   transition: top 0.2s ease-in-out;
-  background-color: var(--bgcolor);
+  /* background-color: var(--bgcolor); */
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
@@ -156,28 +156,36 @@ section .address {
   display: none;
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 700px) {
   section .message {
-    font-size: min(7vh, 7vw);
-    line-height: min(10vh, 10vw);
+    font-size: 5vh;
+    line-height: 6vh;
+  }
+  section .address {
+    font-size: 4vh;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-height: 500px) {
+  header {
+    padding: 10px 20px;
+  }
   section .message {
-    font-size: min(7vh, 7vw);
-    line-height: min(10vh, 10vw);
+    font-size: 6vh;
+    line-height: 7vh;
+  }
+  section .address {
+    font-size: 5vh;
   }
 }
-
-@media screen and (max-height: 300px) {
-  section .message {
-    font-size: min(8vh, 8vw);
-    line-height: min(11vh, 11vw);
+@media screen and (max-height: 350px) {
+  header {
+    padding: 5px 10px;
   }
-}
-@media screen and (max-width: 300px) {
   section .message {
-    font-size: min(8vh, 8vw);
-    line-height: min(11vh, 11vw);
+    font-size: 7vh;
+    line-height: 8vh;
+  }
+  section .address {
+    font-size: 6vh;
   }
 }
