@@ -162,7 +162,7 @@ section .address {
     line-height: 6vh;
   }
   section .address {
-    font-size: 4vh;
+    font-size: 3.3vh;
   }
 }
 @media screen and (max-height: 500px) {
@@ -174,7 +174,7 @@ section .address {
     line-height: 7vh;
   }
   section .address {
-    font-size: 5vh;
+    font-size: 4.3vh;
   }
 }
 @media screen and (max-height: 350px) {
@@ -186,6 +186,6 @@ section .address {
     line-height: 8vh;
   }
   section .address {
-    font-size: 6vh;
+    font-size: 5.3vh;
   }
 }
