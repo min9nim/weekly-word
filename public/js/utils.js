@@ -61,7 +61,7 @@ export const wordToHtml = word => `
             <span>${word.message}</span>
           </div>
           <div class="address">
-            <span>${word.address}</span>
+            <span>- ${word.address}</span>
           </div>
         </section>
     </div>`

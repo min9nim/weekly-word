@@ -1,5 +1,6 @@
 :root {
   --primary: #ededed;
+  --primary2: #dedede;
   --secondary: #aaaaaa;
   --bgcolor: #333333;
 }
@@ -106,8 +107,9 @@ section .message {
   line-height: 5vh;
 }
 section .address {
-  font-size: 3vh;
+  font-size: 2.5vh;
   text-align: right;
+  color: var(--primary2);
 }
 
 .allWords {
@@ -162,7 +164,7 @@ section .address {
     line-height: 6vh;
   }
   section .address {
-    font-size: 3.3vh;
+    font-size: 3vh;
   }
 }
 @media screen and (max-height: 500px) {
@@ -174,7 +176,7 @@ section .address {
     line-height: 7vh;
   }
   section .address {
-    font-size: 4.3vh;
+    font-size: 4vh;
   }
 }
 @media screen and (max-height: 350px) {
@@ -186,6 +188,6 @@ section .address {
     line-height: 8vh;
   }
   section .address {
-    font-size: 5.3vh;
+    font-size: 5vh;
   }
 }
