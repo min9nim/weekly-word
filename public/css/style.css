@@ -181,7 +181,7 @@ section .address {
 }
 @media screen and (max-height: 350px) {
   header {
-    padding: 5px 20px;
+    padding: 10px 20px;
   }
   section .message {
     font-size: 7vh;
