@@ -91,22 +91,22 @@ section {
   /*display: flex;*/
   /*flex-direction: column;*/
   /* height: 100%; */
-  padding: 0 20px 100px 20px;
+  padding: 0 20px 10vh 20px;
 }
 
 section .message {
   text-align: left;
   font-family: ELAND_Nice_M;
-  font-size: 40px;
   vertical-align: bottom;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-bottom: 10px;
-  line-height: 55px;
+  /* margin-bottom: 10px; */
+  font-size: min(5vh, 5vw);
+  line-height: min(7vh, 7vw);
 }
 section .address {
-  font-size: 20px;
+  font-size: min(4vh, 4vw);
   text-align: right;
 }
 
@@ -156,12 +156,28 @@ section .address {
   display: none;
 }
 
-@media screen and (max-width: 769px) {
-  body {
-    padding: 0;
-  }
+@media screen and (max-height: 400px) {
   section .message {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: min(7vh, 7vw);
+    line-height: min(10vh, 10vw);
+  }
+}
+@media screen and (max-width: 400px) {
+  section .message {
+    font-size: min(7vh, 7vw);
+    line-height: min(10vh, 10vw);
+  }
+}
+
+@media screen and (max-height: 300px) {
+  section .message {
+    font-size: min(8vh, 8vw);
+    line-height: min(11vh, 11vw);
+  }
+}
+@media screen and (max-width: 300px) {
+  section .message {
+    font-size: min(8vh, 8vw);
+    line-height: min(11vh, 11vw);
   }
 }
