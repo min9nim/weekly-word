@@ -17,3 +17,8 @@ initSwiper(today)
 
 // 전체암송구절 세팅
 initAllWords()
+
+var agent = navigator.userAgent.toLowerCase()
+if (agent.includes('firefox')) {
+  document.querySelector('body').classList.toggle('dark')
+}

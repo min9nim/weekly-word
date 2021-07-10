@@ -3,6 +3,11 @@
   --primary2: #dedede;
   --secondary: #aaaaaa;
   --bgcolor: #333333;
+
+  --light-primary: #333333;
+  --light-primary2: #444444;
+  --light-secondary: #555555;
+  --light-bgcolor: #ffffff;
 }
 
 @font-face {
@@ -64,12 +69,15 @@ body {
   /*overflow: hidden;*/
 }
 body {
-  background-color: var(--bgcolor);
-  color: var(--primary);
   display: flex;
   flex-direction: column;
   max-width: 700px;
   margin: 0 auto;
+  background-color: var(--light-bgcolor);
+}
+body.dark {
+  background-color: var(--bgcolor);
+  color: var(--primary);
 }
 
 header {
@@ -77,13 +85,23 @@ header {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  color: var(--light-secondary);
+}
+body.dark header {
   color: var(--secondary);
 }
 
 header > div:nth-child(1) {
-  color: var(--primary);
+  color: var(--light-primary);
 }
 header > div:nth-child(2) {
+  color: var(--light-secondary);
+}
+
+body.dark header > div:nth-child(1) {
+  color: var(--primary);
+}
+body.dark header > div:nth-child(2) {
   color: var(--secondary);
 }
 
@@ -109,6 +127,9 @@ section .message {
 section .address {
   font-size: 2.5vh;
   text-align: right;
+  color: var(--light-primary2);
+}
+body.dark section .address {
   color: var(--primary2);
 }
 
@@ -116,7 +137,7 @@ section .address {
   font-size: 14px;
   text-align: right;
   /* padding: 20px; */
-  color: var(--secondary);
+  color: var(--light-secondary);
   z-index: 1000;
   position: absolute;
   top: calc(100% - 55px);
@@ -125,6 +146,9 @@ section .address {
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
+}
+body.dark .allWords {
+  color: var(--secondary);
 }
 
 .allWords > .label {
