@@ -191,7 +191,7 @@ body.dark .allWords {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 163px;
+  width: 142px;
 }
 
 @media screen and (max-height: 700px) {
