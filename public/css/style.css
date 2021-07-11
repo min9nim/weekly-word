@@ -106,6 +106,10 @@ body.dark header > div:nth-child(2) {
   color: var(--secondary);
 }
 
+header .this-week {
+  font-size: 14px;
+}
+
 section {
   /* flex: 1; */
   /*display: flex;*/
