@@ -23,6 +23,15 @@ if (agent.includes('firefox')) {
   document.querySelector('body').classList.toggle('dark')
 }
 
+if (!localStorage.getItem('dark')) {
+  document.querySelector('body').classList.toggle('dark')
+}
+
 document.querySelector('.dark-btn').addEventListener('click', () => {
   document.querySelector('body').classList.toggle('dark')
+  if (localStorage.getItem('dark')) {
+    localStorage.removeItem('dark')
+  } else {
+    localStorage.setItem('dark', '1')
+  }
 })
