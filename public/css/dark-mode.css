@@ -1,0 +1,42 @@
+body .dark-btn {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  outline: none;
+  padding: 12px;
+  border: none;
+  border-radius: 9999px;
+  background-color: var(--theme-ui-colors-header-button-bg, #0b5fff);
+  color: var(--theme-ui-colors-header-button-color, #ffffff);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color ease-in-out 0.5s;
+  transition: background-color ease-in-out 0.5s;
+}
+
+body.dark .dark-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  outline: none;
+  padding: 12px;
+  border: none;
+  border-radius: 9999px;
+  background-color: var(--theme-ui-colors-header-button-bg, #1fb6ff);
+  color: var(--theme-ui-colors-header-button-color, #ffffff);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}

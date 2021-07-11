@@ -22,3 +22,7 @@ var agent = navigator.userAgent.toLowerCase()
 if (agent.includes('firefox')) {
   document.querySelector('body').classList.toggle('dark')
 }
+
+document.querySelector('.dark-btn').addEventListener('click', () => {
+  document.querySelector('body').classList.toggle('dark')
+})

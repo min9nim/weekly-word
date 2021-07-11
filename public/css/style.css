@@ -182,6 +182,13 @@ body.dark .allWords {
   display: none;
 }
 
+.week-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 181px;
+}
+
 @media screen and (max-height: 700px) {
   section .message {
     font-size: 5vh;
