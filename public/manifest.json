@@ -4,7 +4,8 @@
   "description": "매주 말씀 하나를 암송해요!",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#663399",
+  "theme_color": "#ededed",
+  "background_color": "#333333",
   "icons": [
     {
       "src": "/android-icon-36x36.png",
