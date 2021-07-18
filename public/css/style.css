@@ -108,6 +108,7 @@ body.dark header > div:nth-child(2) {
 
 header .this-week {
   font-size: 14px;
+  margin-right: 10px;
 }
 
 section {
@@ -191,7 +192,7 @@ body.dark .allWords {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 160px;
+  /* width: 160px; */
 }
 
 @media screen and (max-height: 700px) {
