@@ -36,3 +36,7 @@ document.querySelector('.logo').addEventListener('click', () => {
   swiper.slideTo(wordIndex(today) + 60, 1000)
   initDate(today)
 })
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+}
