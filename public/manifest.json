@@ -2,8 +2,8 @@
   "name": "매주말씀암송",
   "short_name": "매주말씀암송",
   "description": "매주 말씀 하나를 암송해요!",
-  "short_url": "/",
-  "display": "fullscreen",
+  "start_url": "/",
+  "display": "standalone",
   "theme_color": "#663399",
   "icons": [
     {
