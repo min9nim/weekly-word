@@ -1,4 +1,10 @@
-import { initAllWords, initDate, initSwiper, wordIndex } from './utils.js'
+import {
+  initAllWords,
+  initDarkMode,
+  initDate,
+  initSwiper,
+  wordIndex,
+} from './utils.js'
 import dayjs from 'https://unpkg.com/dayjs@1.8.21/esm'
 
 console.log('main.js start')
@@ -18,23 +24,13 @@ initSwiper(today)
 // 전체암송구절 세팅
 initAllWords()
 
+// 다크모드 세팅
+initDarkMode()
+
 var agent = navigator.userAgent.toLowerCase()
 if (agent.includes('firefox')) {
   document.querySelector('body').classList.toggle('dark')
 }
-
-if (!localStorage.getItem('dark')) {
-  document.querySelector('body').classList.toggle('dark')
-}
-
-document.querySelector('.dark-btn').addEventListener('click', () => {
-  document.querySelector('body').classList.toggle('dark')
-  if (localStorage.getItem('dark')) {
-    localStorage.removeItem('dark')
-  } else {
-    localStorage.setItem('dark', '1')
-  }
-})
 
 document.querySelector('.logo').addEventListener('click', () => {
   swiper.slideTo(wordIndex(today) + 60, 1000)

@@ -85,3 +85,18 @@ export const initDate = target => {
 
 export const weeksCount = (initDay, targetDay) =>
   dayjs.duration(targetDay.diff(initDay)).weeks()
+
+export const initDarkMode = () => {
+  if (!localStorage.getItem('dark')) {
+    document.querySelector('body').classList.toggle('dark')
+  }
+
+  document.querySelector('.dark-btn').addEventListener('click', () => {
+    document.querySelector('body').classList.toggle('dark')
+    if (localStorage.getItem('dark')) {
+      localStorage.removeItem('dark')
+    } else {
+      localStorage.setItem('dark', '1')
+    }
+  })
+}
