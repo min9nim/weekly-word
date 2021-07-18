@@ -88,6 +88,9 @@ header {
   justify-content: space-between;
   color: var(--light-secondary);
 }
+header > .logo {
+  cursor: pointer;
+}
 body.dark header {
   color: var(--secondary);
 }

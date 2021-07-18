@@ -1,4 +1,4 @@
-import { initAllWords, initDate, initSwiper } from './utils.js'
+import { initAllWords, initDate, initSwiper, wordIndex } from './utils.js'
 import dayjs from 'https://unpkg.com/dayjs@1.8.21/esm'
 
 console.log('main.js start')
@@ -34,4 +34,9 @@ document.querySelector('.dark-btn').addEventListener('click', () => {
   } else {
     localStorage.setItem('dark', '1')
   }
+})
+
+document.querySelector('.logo').addEventListener('click', () => {
+  swiper.slideTo(wordIndex(today) + 60, 1000)
+  initDate(today)
 })
