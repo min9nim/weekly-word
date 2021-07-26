@@ -1,5 +1,8 @@
 import dayjs from 'https://unpkg.com/dayjs@1.8.21/esm'
-import words from './words.js'
+import wordList from './words.js'
+
+const words = wordList.map((item, idx) => ({ ...item, idx }))
+window.words = words
 
 export const initAllWords = () => {
   document.querySelector('.allWords > ul').innerHTML = words
@@ -20,23 +23,13 @@ export const initAllWords = () => {
   document
     .querySelector('.allWords > .label > span')
     .addEventListener('click', () => {
-      // window.scrollTo(0, document.documentElement.offsetHeight - 40)
-      // const allWordsDom = document.querySelector('.allWords')
-      //
-      // if(allWordsDom.style.top === '0px'){
-      //   document.querySelector('.allWords').style.top = 'calc(100% - 55px)'
-      // }else{
-      //   document.querySelector('.allWords').style.top = '0px'
-      // }
       window.scrollTo(0, document.documentElement.offsetHeight - 40)
-
-      // document.querySelector('.mySwiper').classList.toggle('hidden')
-      // document.querySelector('header').classList.toggle('hidden')
     })
 }
 
 export const initSwiper = today => {
   const index = wordIndex(today)
+
   // index 가 항상 중앙에 위치하게끔 좌우로 더 여유있게 붙여줌
   const after = [...words.slice(index), ...words.slice(0, index)]
   const before = [
@@ -99,4 +92,32 @@ export const initDarkMode = () => {
       localStorage.setItem('dark', '1')
     }
   })
+}
+
+export const initApp = today => {
+  // 날짜세팅
+  initDate(today)
+
+  // 말씀 슬라이드 세팅
+  initSwiper(today)
+
+  // 전체암송구절 세팅
+  initAllWords()
+
+  // 다크모드 세팅
+  initDarkMode()
+
+  var agent = navigator.userAgent.toLowerCase()
+  if (agent.includes('firefox')) {
+    document.querySelector('body').classList.toggle('dark')
+  }
+
+  document.querySelector('.logo').addEventListener('click', () => {
+    swiper.slideTo(wordList.length, 1000)
+    initDate(today)
+  })
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js')
+  }
 }
